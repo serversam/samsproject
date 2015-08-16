@@ -1,0 +1,53 @@
+<div id="searchbar">
+	<div id="searchbox">
+		<div>
+			<input type="text" name="searchtext" />
+		</div>
+		
+		<div id="searchicon">
+			<span class="fa fa-search"></span>
+		</div>
+	</div>
+	
+	<div id="result">
+		<ul id="resultsList">
+			<!--Results come here-->
+		</ul>
+	</div>
+	
+		<script>
+			var reg = $('input[name=searchtext]');
+			reg.data('previous', reg.val());
+			
+			var results = $("#result");
+			results.hide();
+			
+			reg.bind("propertychange change click keyup input paste blur", function(event) {
+				if(event.type === "blur"){
+					results.hide();
+				} else if (reg.data('previous') !=  reg.val()) {
+					reg.data('previous', reg.val());
+					
+					//Load DB
+
+					var htmlString = "";
+					for (var i = 0; i < 5; i++) {
+					 htmlString += "Hello";
+					}
+
+					//Load DB
+					
+					if(reg.val().trim() !== '') {
+					   if (htmlString === "")
+						   htmlString = "<li style=\"font-style:italic;text-align:center\">--- No results found ---</li>";
+					   $('#resultList').html(htmlString);
+					   results.show();
+					} else {
+					   results.hide();
+					}
+				}
+			});
+			
+		</script>
+	
+</div>

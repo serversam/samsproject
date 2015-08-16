@@ -1,0 +1,265 @@
+.rightFlow {
+    float: right;
+}
+
+.leftFlow {
+    float: left;
+}
+
+.centerFlow{
+    margin: auto;
+}
+
+.showHand {   
+    cursor: pointer;
+    cursor: hand;
+}
+
+#mainBody{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#mainBody #loadCore{ /*Center align the div*/
+    margin: auto; 
+}
+
+#mainBody a {
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+
+#mainBody div {
+    /*overflow: hidden;*/
+}
+
+/*Navbar stuff...begin*/
+#navbar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	background-color: lightgray;
+}
+
+#navbar > div {
+    top: 2px;
+}
+
+#navbar #projectBtn {
+    position: absolute;
+    top: 5px;
+    max-width: 10%;
+    margin-left: 20px;
+    padding-right: 20px;
+    font-size: 20px; /*Static*/
+    border-right: 2px solid black;
+    overflow: hidden;
+}
+
+#navbar #myLogo {
+    position: absolute;
+}
+
+#navbar #rightNav > div{
+    margin-right: 10px;
+}
+
+#navbar #rightNav #userAvatar{
+    margin-top: 3px;
+}
+
+#navbar #rightNav #searchIco{
+    margin-top: 10px;
+}
+
+#navbar #rightNav #moreOpts{
+    margin-top: 10px;
+}
+
+#navbar #optLists{
+    position: absolute;
+    right: 0%;
+    top: 40px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#navbar #optLists ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#navbar #optLists ul a li{
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-bottom: 1px solid lightgray;
+}
+
+#navbar #optLists ul a li:hover{
+    background-color: lightgray;
+}
+
+.sideSwipeLogo {
+    left: 15%;
+    font-size: 20px;
+    padding-top: 3px;
+}
+
+@media (max-width: 1000px){
+    .hideBlow1000{
+        display: none;
+    }
+}
+
+@media (min-width: 1001px){
+    .showBlow1000{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hideBlow600{
+        display: none;
+    }
+}
+
+@media (min-width: 601px) {
+    .showBlow600{
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .hideBlow460{
+        display: none;
+    }
+
+    #navbar #rightNav #searchInput{
+        position: absolute;
+        right: 0%;
+        top: 40px;
+    }
+
+    #navbar #rightNav #searchInput input{
+        opacity: 1.0;
+        filter: alpha(opacity=100);
+        border-radius: 5px;
+    }
+
+    .beforeSwipe{
+        left: 35%;
+    }
+}
+
+@media (min-width: 460px) {
+    .showBlow460{
+        display: none;
+    }
+
+    #navbar #rightNav #searchInput{
+        width: 40%;
+        margin-top: 9px;
+    }
+
+    #navbar #rightNav #searchInput input{
+        width: 100%;
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+        border-radius: 5px;
+    }
+
+    .beforeSwipe{
+        left: 45%;
+    }
+}
+
+/*Navbar stuff...end*/
+
+
+#loadCore {
+    max-width: 1920px;
+    width: 80%;
+    height: 900px; /*static*/
+    background-color: darkgray;
+}
+
+#footer {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 120px; /*Static*/
+	background-color: lightgray;
+}
+
+/*Start searchbar*/
+#searchbar {
+    position: relative;
+    width: 400px; /*Only part to be changed by jQuery*/
+    height: 30px;
+    z-index: 1000;
+}
+
+#searchbox {
+    float: left;
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+#searchbox input {
+	float:left;
+    text-align: left;
+    height: 100%;
+    width: 80%;
+}
+
+#searchicon {
+    float: left;
+    max-width: 80px;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+
+#searchicon span{
+    top: 7%;
+    font-weight: bold;
+}
+
+#result {
+    position: inherit;
+    width: 320px; /*Only part to be changed by jQuery*/
+    background-color: white;
+    border: 1px solid lightgray;
+    padding-top: 5px;
+    overflow: auto;
+    top: 30px;
+    left: 0px;
+}
+
+#result ul{
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#result ul a{
+    color: black;
+    text-decoration: none;
+    outline: none;
+}
+
+#result ul a li:hover{
+    background-color: #f2f2f2;
+}
+/*End searchbar*/
